@@ -24,7 +24,6 @@ const __dirname = path.resolve(path.dirname(''));
 //MIDDLEWARE
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors(corsProperties));
 //  app.use(cors());
 const PORT = process.env.PORT || 5000;
 //DB CONNECTION
