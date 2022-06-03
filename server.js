@@ -17,10 +17,7 @@ import connectDB from "./utilities/dbConnection.js";
 //APP
 const app = express();
 dotenv.config();
-var corsProperties = {
-  credentials: true,
-  origin: ["http://localhost:3000"],
-};
+
 
 const __dirname = path.resolve(path.dirname(''));
 // console.log(__dirname+"_");
