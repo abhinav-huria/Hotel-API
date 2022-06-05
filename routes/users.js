@@ -91,7 +91,13 @@ const router = express.Router();
  *        solved:
  *         type: boolean
  *         default: false
- *         description: Is the dispute solved    
+ *         description: Is the dispute solved   
+ *      example:
+ *         userId: U421191
+ *         name: admin
+ *         email: abhinav0331.cse19@chitkara.edu.in
+ *         subject: Test Subject
+ *         message: Test Message 
  */
 
 
