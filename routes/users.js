@@ -140,7 +140,7 @@ router.get("/all/c", verifyAdmin, getUsers);
  *           type: string
  *         required: true
  *         description: the id of the user
- *         example: U865855
+ *         example: U165822
  *     responses:
  *       200:
  *         description: Successfully retrieved user
@@ -173,7 +173,7 @@ router.get("/:userId", verifyUser, getUser);
  *         type: string
  *        required: true
  *        description: the id of the user
- *        example: U865855
+ *        example: U421191
  *    requestBody:
  *        content:
  *          application/json:
@@ -208,7 +208,7 @@ router.put("/update/:userId", verifyUser, updateUser);
  *            type: string
  *          required: true
  *          description: The id of the user
- *          example: U865855
+ *          example: U421191
  *     responses:
  *       200:
  *        description: Successfully deleted user
@@ -292,7 +292,7 @@ router.get("/disputes/all", verifyAdmin, getDisputes);
  *           type: string
  *         required: true
  *         description: the id of the dispute
- *         example: D1
+ *         example: D1***
  *     responses:
  *       200:
  *         description: Successfully marked dispute as solved

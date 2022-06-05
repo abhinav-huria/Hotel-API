@@ -119,7 +119,7 @@ router.get("/", verifyAdmin, getHotels);
  *           type: string
  *         required: true
  *         description: The id of the hotel
- *         example: H577602
+ *         example: H525988
  *     responses:
  *       200:
  *         description: Successfully retrieved hotel
@@ -256,7 +256,7 @@ router.post("/addhotel",verifyAdmin, addHotel);
  *         type: string
  *        required: true
  *        description: The id of the hotel
- *        example: H2750
+ *        example: U421191
  *    requestBody:
  *        content:
  *          application/json:
@@ -291,7 +291,7 @@ router.put("/update/:id", verifyAdmin, updateHotel);
  *            type: string
  *          required: true
  *          description: The id of the hotel
- *          example: H2750
+ *          example: H570450
  *     responses:
  *       200:
  *        description: Successfully deleted hotel

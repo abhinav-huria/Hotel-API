@@ -146,7 +146,7 @@ const router = express.Router();
  * /api/v1/rooms/getRooms/{hotelId}?start={start}&end={end}:
  *   get:
  *     summary: Get all rooms of a hotel
- *     description: This route returns all rooms of a hotel. It is publicly accessible.
+ *     description: This route returns all available (i.e. not booked on the entered dates) rooms of a hotel. It is publicly accessible. <b>Please leave the dates empty to get all rooms</b>.
  *     tags: [Rooms]
  *     parameters:
  *       - in: path
@@ -155,7 +155,7 @@ const router = express.Router();
  *           type: string
  *         required: true
  *         description: The id of the hotel
- *         example: H577602
+ *         example: H525988
  *       - in: query
  *         name: start
  *         schema:
@@ -229,7 +229,7 @@ router.post("/hotel/addRoom", verifyAdmin, addRoom);
  *         type: string
  *        required: true
  *        description: The id of the room
- *        example: R441480
+ *        example: R4948678
  *    requestBody:
  *        content:
  *          application/json:
@@ -266,7 +266,7 @@ router.put("/updateRoom/:id", verifyHotelOwner, updateRoom);
  *            type: string
  *          required: true
  *          description: the id of the room
- *          example: R441480
+ *          example: R948678
  *     responses:
  *       200:
  *        description: Successfully deleted hotel

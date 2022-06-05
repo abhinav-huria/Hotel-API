@@ -54,9 +54,9 @@ const router = express.Router();
  *        endAt: "2022-07-05T00:00:00.000Z"
  *        totalPrice: 1000
  *        guests: 2
- *        roomId: "Rm1"
- *        hotelId: "H1"
- *        userId: "U1"
+ *        roomId: R948678
+ *        hotelId: H525988
+ *        userId: U421191
  */
 
  /**
@@ -81,14 +81,14 @@ const router = express.Router();
  *           type: string
  *         required: true
  *         description: The id of the user
- *         example: U1
+ *         example: U421191
  *       - in: path
  *         name: bookingId
  *         schema:
  *           type: string
  *         required: true
  *         description: The id of the booking 
- *         example: B1
+ *         example: B654887
  *     responses:
  *       200:
  *         description: Successfully retrieved booking
@@ -145,7 +145,7 @@ router.get("/allBookings",verifyAdmin, getBookings);
  *           type: string
  *         required: true
  *         description: The id of the user
- *         example: U1
+ *         example: U421191
  *     responses:
  *       200:
  *         description: Successfully retrieved bookings
@@ -179,14 +179,14 @@ router.get("/mybookings/u/:userId",verifyUser, getUserBookings);
  *           type: string
  *         required: true
  *         description: The id of the hotel
- *         example: H577602
+ *         example: H525988
  *       - in: path
  *         name: roomId
  *         schema:
  *           type: string
  *           required: true
  *           description: The id of the room
- *           example: Rm1
+ *           example: R948678
  *     requestBody:
  *       required: true
  *       content:
@@ -226,7 +226,7 @@ router.post("/book/:userId/:roomId",verifyUser, bookRoom);
  *            type: string
  *          required: true
  *          description: the id of the booking
- *          example: B1
+ *          example: B654887
  *     responses:
  *       200:
  *        description: Successfully deleted hotel
