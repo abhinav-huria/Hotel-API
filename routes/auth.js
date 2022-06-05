@@ -48,6 +48,7 @@ const router = express.Router();
  *        userEmail: help.otelbooking@gmail.com
  *        userPassword: admin  
  *        userPhoneNumber: 4564564564
+ *        isAdmin: true
  */
 
 /**
@@ -87,7 +88,7 @@ const router = express.Router();
  *   post:
  *     summary: New user signup
  *     description: This route is used to create a new user account. The user can be either a customer or an admin/hotel owner. <b>Please enter a VALID email address as an email will be sent to it.</b><br>
- *                  <br> The request body must contain the following fields- userEmail, userPassword, userPhoneNumber & userName. Additionally the user can be an admin or a hotel owner. If the user is an admin, the request body must contain the isAdmin field(set as true). If the user is a hotel owner, the request body must contain the isHotelOwner field(set as true).
+ *                  <br> The request body must contain the following fields- userEmail, userPassword, userPhoneNumber & userName. Additionally the user can be an admin or a hotel owner. If the user is an admin, the request body must contain the <b>isAdmin</b> field(set as true). If the user is a hotel owner, the request body must contain the isHotelOwner field(set as true).
  *     tags: [Auth]
  *     requestBody:
  *       required: true
