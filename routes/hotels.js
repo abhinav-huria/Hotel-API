@@ -140,7 +140,7 @@ router.get("/", getHotels);
  * @swagger
  * /api/v1/hotels/availableCities/c:
  *   get:
- *     summary: Get all <b>cached</b> available cities
+ *     summary: Get all cached available cities
  *     description: This route returns all the cities that the hotels are available in. The data is <b>cached</b> using Redis cloud. If cache is empty, it will be populated from the database. The cache is deleted if any hotel is added.
  *     tags: [Hotels]
  *     responses:
