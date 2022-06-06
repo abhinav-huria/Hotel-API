@@ -105,7 +105,7 @@ const router = express.Router();
   * @swagger
   * tags:
   *   name: Users
-  *   description: The user managing API
+  *   description: User related endpoints
   */
 
 //GET ALL USERS(ADMIN ONLY)
@@ -123,6 +123,8 @@ const router = express.Router();
  *          application/json:
  *            schema:
  *                $ref: '#/components/schemas/User'
+ *       401:
+ *         description: Unauthorized or signed out
  *       404:
  *        description: No users were found
  *       500:
@@ -192,6 +194,8 @@ router.get("/:userId", verifyUser, getUser);
  *           application/json:
  *             schema:
  *                $ref: '#/components/schemas/User'
+ *      401:
+ *        description: Unauthorized or signed out
  *      404:
  *        description: The user was not found
  *      500:
@@ -218,6 +222,8 @@ router.put("/update/:userId", verifyUser, updateUser);
  *     responses:
  *       200:
  *        description: Successfully deleted user
+ *       401:
+ *        description: Unauthorized or signed out
  *       404:
  *        description: The user was not found
  *       500:
@@ -231,7 +237,7 @@ router.delete("/:userId", verifyAdmin, deleteUser);
   * @swagger
   * tags:
   *   name: Disputes
-  *   description: The dispute managing API
+  *   description: Dispute management routes
   */
 
 //SUBMIT DISPUTE
@@ -255,6 +261,8 @@ router.delete("/:userId", verifyAdmin, deleteUser);
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Dispute'
+ *       401:
+ *        description: Unauthorized or signed out
  *       500:
  *        description: Internal server error
  */
@@ -275,6 +283,8 @@ router.post("/dispute/:userId", verifyUser, submitDispute);
  *          application/json:
  *            schema:
  *                $ref: '#/components/schemas/Dispute'
+ *       401:
+ *        description: Unauthorized or signed out
  *       404:
  *        description: No disputes were found
  *       500:
